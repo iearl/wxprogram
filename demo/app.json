@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/list/list",
+    "pages/index/index"
+    
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#489b81",
+    "navigationBarTitleText": "世间若有双全法",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap76.json"
+}

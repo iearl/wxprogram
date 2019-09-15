@@ -1,0 +1,36 @@
+/* pages/index/index.wxss */
+page{
+  height: 100%;
+  background: #8ed145;
+}
+.indexContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+button{
+  font-size: 32rpx;
+  border: 1px solid #999;
+  background: #8ed145;
+}
+.avator{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 100rpx;
+  margin: 100rpx;
+}
+.userName{
+  font-size: 32rpx;
+  font-weight: bold;
+  margin: 100rpx;
+}
+
+.goStudy{
+  width: 220rpx;
+  height: 80rpx;
+  font-size: 28rpx;
+  border: 1rpx solid #999;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
