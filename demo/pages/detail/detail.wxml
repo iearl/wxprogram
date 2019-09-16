@@ -1,20 +1,23 @@
 <!--pages/detail/detail.wxml-->
-<view>
-  <image src="/images/detail/carousel/01.jpg"></image>
-  <view>
-    <image src="/images/avatar/0.png"></image>
-    <text>美国队长</text>
+<view class="detailContiner">
+  <image class='headImg' src="{{detailObj.detail_img}}"></image>
+    <image catchtap="handlerMusic" class="musicImg" src="{{isMuicPlay?'/images/music/music-start.png':'/images/music/music-stop.png'}}"></image>
+
+  <view class='avatar_date'>
+    <image src="{{detailObj.avatar}}"></image>
+    <text>{{detailObj.author}}</text>
     <text>发布于</text>
-    <text>2019-08-07</text>
+    <text>{{detailObj.date}}</text>
   </view>
-  <text>东城</text>
-  <view>
-    <view>
-      <image src="/images/icon/collection-anti.png"></image>
+  <text class='company'>{{detailObj.title}}</text>
+  <view class='collection_share_container'>
+    <view class='collection_share'>
+      <image catchtap="handlerCollectiom" wx:if='{{!isCollectioned}}' src="/images/icon/collection-anti.png"></image>
+      <image catchtap="handlerCollectiom" wx:if='{{isCollectioned}}'  src="/images/icon/collection.png"></image>
       <image src="/images/icon/share.png"></image>
     </view>
     <view class="line"></view>
   </view>
   <button>转发此文章</button>
-  <text>周刊详细信息</text>
+  <text class='content'>{{detailObj.detail_content}}</text>
 </view>
