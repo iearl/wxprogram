@@ -1,5 +1,6 @@
 // pages/detail/detail.js
 let datas = require('../../datas/list-data');
+let appDatas = getApp();
 Page({
 
   /**
@@ -33,6 +34,29 @@ Page({
       this.setData({
       })
     }
+    //监听音乐播放
+    wx.onBackgroundAudioPlay(()=>{
+      this.setData({
+        isMuicPlay:true
+      })
+      appDatas.data.isPlay=true;
+      appDatas.data.pageIndex = index;
+    });
+
+    if(appDatas.data.isPlay&&appDatas.data.pageIndex==index){
+      this.setData({
+        isMuicPlay: false
+      })
+    }
+
+    //监听音乐播放
+    wx.onBackgroundAudioPause(() => {
+      this.setData({
+        isMuicPlay: false
+      })
+      appDatas.data.isPlay = false;
+      appDatas.data.pageIndex = index;
+    });
   },
   handlerCollectiom(){
     let isCollectioned = !this.data.isCollectioned;
@@ -77,5 +101,13 @@ Page({
     }else{
       wx.pauseBackgroundAudio();
     }
+  },
+  //处理点击分享
+  handShare(){
+    wx.showActionSheet({
+      itemList: [
+        '分享到朋友圈','分享到微博','分享到qq空间'
+      ],
+    })
   }
 })

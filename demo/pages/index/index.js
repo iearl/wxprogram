@@ -15,7 +15,7 @@ Page({
     wx.redirectTo({
       url: '/pages/list/list',
     })*/
-    wx.navigateTo({
+    wx.switchTab({
       url:"/pages/list/list"
     })
   },
