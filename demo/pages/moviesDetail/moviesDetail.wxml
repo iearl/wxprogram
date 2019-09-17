@@ -1,0 +1,11 @@
+<!--pages/moviesDetail/moviesDetail.wxml-->
+<view class="moviesDetailContainer">
+  <image class="moviesImg" src="{{moviesDetail.images.large}}"></image>
+  <text class="moviesName">{{moviesDetail.original_title}}</text>
+  <view class="moviesDetail">
+    <text>导演：{{moviesDetail.directors[0].name}}</text>
+    <text>年份：{{moviesDetail.year}}</text>
+    <text>主演:{{moviesDetail.casts[0].name}}</text>
+  </view>
+  <button>我要观影</button>
+</view>

@@ -1,0 +1,38 @@
+/* pages/movies/movies.wxss */
+.moviesContainer{
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 1rpx #eee solid; 
+}
+.moviesImg{
+  width: 128rpx;
+  height: 128.rpx;
+}
+.movies_detail{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-left: 20rpx;  
+}
+.movies_name{
+  width: 70%;
+  font-size: 32rpx;
+  color: #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.devies_year{
+  font-size: 28rpx;
+  color: #666;
+  margin: 8rpx 0;
+}
+.movies_director{
+  font-size: 30rpx;
+  color: #333;
+}
+.movies_score{
+    font-size: 40rpx;
+  color: red;
+  font-weight: bold;
+}
