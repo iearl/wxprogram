@@ -25,13 +25,14 @@ Page({
     });
     //根据本地缓存的数据判断用户是否收藏当前文章
     let detailStorage = wx.getStorageSync('isCollectioned');
-
+    console.log("------------"+detailStorage);
     if (!detailStorage){
       wx.setStorageSync('isCollectioned', {});
     }
     //判断用户是否收藏
     if(detailStorage[index]){
       this.setData({
+        isCollectioned :true
       })
     }
     //监听音乐播放

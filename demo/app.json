@@ -26,5 +26,9 @@
         "selectedIconPath": "/images/tab/dianying_hl.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap14.json",
+  "requiredBackgroundModes": [
+    "audio"
+  ]
 }
